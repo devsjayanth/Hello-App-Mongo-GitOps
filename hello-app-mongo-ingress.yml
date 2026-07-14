@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello-app-ingress
+  namespace: prod-space
+  annotations:
+    nginx.org/rewrites: "serviceName=mongo-express-service rewrite=/"
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: "PLACEHOLDER"
+      http:
+        paths:
+          - path: /mongo
+            pathType: Prefix
+            backend:
+              service:
+                name: mongo-express-service
+                port:
+                  number: 8081
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: hello-app
+                port:
+                  number: 8000

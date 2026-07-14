@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hello-app-config
+  namespace: prod-space
+data:
+  PORT: "8000"
+  LOG_LEVEL: "INFO"
+  DEBUG: "false"
+  FORWARDED_ALLOW_IPS: "*"
