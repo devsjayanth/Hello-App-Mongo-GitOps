@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: "PLACEHOLDER"
+    - host: "ec2-3-7-39-160.ap-south-1.compute.amazonaws.com"
       http:
         paths:
           - path: /mongo
