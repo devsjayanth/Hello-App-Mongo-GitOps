@@ -3,12 +3,10 @@ kind: Ingress
 metadata:
   name: k8s-ingress
   namespace: prod-space
-  annotations:
-    nginx.org/rewrites: "serviceName=mongo-express-service rewrite=/"
 spec:
   ingressClassName: nginx
   rules:
-    - host: "ec2-35-154-56-31.ap-south-1.compute.amazonaws.com"
+    - host: "ec2-3-111-223-27.ap-south-1.compute.amazonaws.com"
       http:
         paths:
           - path: /mongo
