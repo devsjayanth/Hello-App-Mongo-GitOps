@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: hello-app-ingress
   namespace: prod-space
+  annotations:
+    nginx.org/rewrites: "serviceName=mongo-express-service rewrite=/"
 spec:
   ingressClassName: nginx
   rules:
