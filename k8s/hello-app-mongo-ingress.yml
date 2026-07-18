@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: "ec2-3-111-223-27.ap-south-1.compute.amazonaws.com"
+    - host: "ec2-35-154-154-168.ap-south-1.compute.amazonaws.com"
       http:
         paths:
           - path: /mongo
