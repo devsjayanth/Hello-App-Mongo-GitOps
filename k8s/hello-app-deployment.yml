@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
         - name: hello-app
-          image: devsjayanth/hello-app:2
+          image: devsjayanth/hello-app:3
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
